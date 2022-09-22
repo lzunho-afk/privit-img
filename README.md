@@ -4,19 +4,16 @@ O Privit ImageDB é um gerenciador de imagens e um provedor de diversas formas d
 
 ## Instalação
 
-### Unix
-
-Para instalação em sistemas operacionais baseados em Unix, apenas execute o arquivo **"configure.sh"** para _compilação_ e, após, para _instalação_.
+Para realizar a instalação do Privit Server apenas execute o arquivo **"configure.sh"** para realizar o download e manutenção (_argumento update_) das bibliotecas necessárias, após, crie um diretório na raíz do projeto e execute o CMake.
 
 ```
-$ ./configure.sh --compile
-$ ./configure.sh --install
+$ ./configure.sh
+$ mkdir build && cd build
+$ cmake ..
 ```
 
 Utilize o comando de ajuda para informações mais específicas sobre a execução do script:
 
 > $ ./configure.sh --help
 
-### Windows
-
-Para instalação no SO da Microsoft apenas execute o Batch Script, que, para caso de instalação simples e painel de ajuda, funciona igual ao script configure.sh.
+Perceba que o script pode não funcionar em outros sistemas operacionais.
