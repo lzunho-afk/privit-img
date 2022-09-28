@@ -1,17 +1,15 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.0.0)
+project(privit-img VERSION 0.1.0)
 
-project(privitimgdb)
-
-set(CMAKE_CXX_STANDARD 20)
+include(CTest)
+enable_testing()
 
 set(SOURCES
-    src/privit.cpp
+    src/main.c
     )
 
-add_executable(SOURCES privit)
+add_executable(privit-img ${SOURCES})
 
-add_subdirectory(include/libpqxx build-pqxx)
-target_link_libraries(privitimgdb PRIVATE pqxx)
-
-#install (TARGETS SOURCES
-#           RUNTIME DESTINATION bin)
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack)
