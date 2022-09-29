@@ -6,9 +6,14 @@ enable_testing()
 
 set(SOURCES
     src/main.c
+    src/server.c
+    src/client.c
     )
 
+include_directories(privit-img PRIVATE include)
 add_executable(privit-img ${SOURCES})
+
+target_link_libraries(privit-img pthread)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
