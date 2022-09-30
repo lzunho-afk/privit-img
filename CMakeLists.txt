@@ -6,8 +6,6 @@ enable_testing()
 
 set(SOURCES
     src/main.c
-    src/server.c
-    src/client.c
     )
 
 include_directories(privit-img PRIVATE include)
