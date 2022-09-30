@@ -2,7 +2,6 @@
 *.d
 
 # Compiled Object files
-build/
 *.slo
 *.lo
 *.o
@@ -32,4 +31,7 @@ build/
 *.out
 *.app
 
+# ------------------
 .vscode/
+build/
+lib/libcyaml/
