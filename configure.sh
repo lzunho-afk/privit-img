@@ -13,6 +13,8 @@ if [ BUILD_PKGS ]; then
     libcyaml_root = $PROJECT_PATH/packages/libcyaml-1.3.1
     cd $libcyaml_root
     make
-    cp $libcyaml_root/build/release/libcyaml.a $PROJECT_PATH/libs/
-    cp $libcyaml_root/include/cyaml/ $PROJECT_PATH/include/
+    mkdir -p $PROJECT_PATH/lib/libcyaml/lib
+    mkdir -p $PROJECT_PATH/lib/libcyaml/include
+    cp $libcyaml_root/build/release/libcyaml.a $PROJECT_PATH/lib/libcyaml/lib/
+    cp $libcyaml_root/include/cyaml/ $PROJECT_PATH/lib/libcyaml/include/
 fi
