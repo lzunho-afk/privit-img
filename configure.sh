@@ -10,6 +10,9 @@ fi
 
 # Bibliotecas necessárias
 if [ BUILD_PKGS ]; then
-    cd $PROJECT_PATH/include/libcyaml-1.3.1/
+    libcyaml_root = $PROJECT_PATH/packages/libcyaml-1.3.1
+    cd $libcyaml_root
     make
+    cp $libcyaml_root/build/release/libcyaml.a $PROJECT_PATH/libs/
+    cp $libcyaml_root/include/cyaml/ $PROJECT_PATH/include/
 fi
