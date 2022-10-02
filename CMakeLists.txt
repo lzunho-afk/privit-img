@@ -44,6 +44,7 @@ if(PostgreSQL_FOUND)
     list(APPEND LIBRARIES ${PostgreSQL_LIBRARIES})
     list(APPEND LIBRARIES_DIRS ${PostgreSQL_LIBRARY_DIRS})
     list(APPEND INCLUDE_DIRS ${PostgreSQL_INCLUDE_DIRS})
+    set(POSTGRESQL_SUPPORT TRUE)
 endif()
 
 configure_file(

@@ -1,6 +1,6 @@
 #ifndef CONFIG_H_IN
 #define CONFIG_H_IN
 
-#define POSTGRESQL_SUPPORT @PostgreSQL_FOUND@
+#cmakedefine01 POSTGRESQL_SUPPORT
 
 #endif // CONFIG_H_IN
