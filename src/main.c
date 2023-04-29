@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "cyaml/cyaml.h"
-
 #include <argp.h>
+#include <yaml.h>
 #include <sqlite3.h>
 
 #include "config.h"
@@ -63,7 +62,6 @@ static struct argp argp = { options, parse_opt, args_doc, doc };
 
 int main(int argc, char **argv) {
     struct arguments arguments;
-    cyaml_err_t yaml_err;
 
     // Argument parse
     arguments.config_file = "-";
