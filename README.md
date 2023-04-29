@@ -1,19 +1,30 @@
 # Privit ImageDB
 
-O Privit ImageDB é um gerenciador de imagens e um provedor de diversas formas de acesso a mídia digital (funcionamento por API). Todo o funcionamento interno do Privit se baseia em seu protocolo próprio que é especificado em [Protocolo Privit ImageDB](https://zunho.com.br/index.php?pages/Privit-ImageDB).
+O Privit ImageDB é um gerenciador de imagens e um provedor de diversas formas de acesso a mídia digital. Todo o funcionamento interno do Privit se baseia em seu protocolo próprio que é especificado no [pages](https://lzunho-afk.github.io/privit-img).
 
-## Instalação
+## Compilação
 
-Para realizar a instalação do Privit Server apenas execute o arquivo **"configure.sh"** para realizar o download e manutenção (_argumento update_) das bibliotecas necessárias, após, crie um diretório na raíz do projeto e execute o CMake.
+Para compilar o Privit-img recomendamos seguir os seguintes passos:
+
+- Clonar e entrar no diretório do projeto:
 
 ```
-$ ./configure.sh
+$ git clone https://github.com/lzunho-afk/privit-img.git
+$ cd privit-img
+```
+
+- Criar um diretório para realizar a compilação com o CMake:
+
+```
 $ mkdir build && cd build
 $ cmake ..
+$ make
 ```
 
-Utilize o comando de ajuda para informações mais específicas sobre a execução do script:
+## Gerar Documentação
 
-> $ ./configure.sh --help
+Para gerar os arquivos de documentação do código fonte utilizamos o Doxygen integrado ao CMake. Portanto, apenas ative a variável da documentação da seguinte forma:
 
-Perceba que o script pode não funcionar em outros sistemas operacionais.
+```
+cmake -DBUILD_DOC=ON ..
+```
